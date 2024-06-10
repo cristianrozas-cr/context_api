@@ -7,7 +7,12 @@ const Gallery = () => {
 
   //Funcion para que al dar click cambie el estado del boolean
   function liked(index){
-    photos[index].liked = true;
+    if (photos[index].liked == false) {
+      photos[index].liked = true
+    } else {
+      photos[index].liked = false
+    }
+    
 }
 
   return <div className="gallery grid-columns-5 p-3">
